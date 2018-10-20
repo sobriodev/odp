@@ -1,2 +1,9 @@
-<!DOCTYPE RCC>
-<RCC version="1.0"/>
+<RCC>
+    <qresource prefix="/">
+        <file>icons/color-icon.svg</file>
+        <file>icons/new-icon.svg</file>
+        <file>icons/open-icon.svg</file>
+        <file>icons/run-icon.svg</file>
+        <file>icons/save-icon.svg</file>
+    </qresource>
+</RCC>
