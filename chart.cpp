@@ -49,11 +49,9 @@ void Chart::drawLinearGrid(QPainter *painter, QRect geometry)
     dvx = (maxValueX - minValueX) / gridNumX;
     dvy = (maxValueY - minValueY) / gridNumY;
     for (int px=0; px <= gridNumX; px++) // X axis
-        painter->drawText(QPoint(gx+(static_cast<int>(dx)*px), gy+gh+font.pointSize() * 3),
-                          QString("%1").arg(minValueX + dvx*px));
+        painter->drawText(QPoint(gx+(static_cast<int>(dx)*px), gy+gh+font.pointSize()*3), QString("%1").arg(minValueX + dvx*px));
     for (int py=0; py <= gridNumY; py++) // Y axis
-        painter->drawText(QPoint(gx-(font.pointSize()*4), gy+static_cast<int>(dy*py)+font.pointSize()/2),
-                          QString("%1").arg(maxValueY - dvy*py));
+        painter->drawText(QPoint(gx-(font.pointSize()*4), gy+static_cast<int>(dy*py)+font.pointSize()/2), QString("%1").arg(maxValueY - dvy*py));
 }
 
 void Chart::drawLinearData(QPainter *painter)
